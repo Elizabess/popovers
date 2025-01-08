@@ -12,8 +12,8 @@ class Popover {
         popover.className = 'popover';
         popover.innerHTML =
             <div> 
-                <div class="popover-header">${this.title}</div>
-                <div class="popover-body">${this.content}</div>
+                <div class="popover-header">`${this.title}`</div>
+                <div class="popover-body">`${this.content}`</div>
             </div>;
         document.body.appendChild(popover);
         return popover;
