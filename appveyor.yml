@@ -1,18 +1,17 @@
-  version: 1.0.{build}
-  image: Visual Studio 2019
+version: 1.0.{build}
+image: Visual Studio 2019
 
-  build:
-      mode: script
+build:
+  mode: script
 
-    script:
-      - npm install
-      - npm run build  # Замените на вашу команду сборки
+script:
+  - npm install
+  - npm run build  # Замените на вашу команду сборки
 
-  deploy:
-    provider: GitHubPages
-    branch: gh-pages 
-    folder: dist 
-    skip_cleanup: true 
-    on:
-      branch: master 
-   
+deploy:
+  provider: GitHubPages
+  branch: gh-pages 
+  folder: dist 
+  skip_cleanup: true 
+  on:
+    branch: master
