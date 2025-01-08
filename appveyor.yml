@@ -1,11 +1,12 @@
   version: 1.0.{build}
   image: Visual Studio 2019
 
-  before_build:
-    - cmd: echo "Preparing for build..."
+  build:
+      mode: script
 
-  after_build:
-    - cmd: echo "Building completed."
+    script:
+      - npm install
+      - npm run build  # Замените на вашу команду сборки
 
   deploy:
     provider: GitHubPages
