@@ -1,16 +1,12 @@
-    version: 1.0.{build}
-    image: Visual Studio 2019
+  version: 1.0.{build}
+  image: Visual Studio 2019
 
-    configuration:
-      - Release
+  build_script:
+    - npm install
+    - npm run build
 
-    build_script:
-      - npm install
-      - npm run build
-
-    deploy:
-      provider: GitHubPages
-      github_repo: Elizabess/popovers
-      on:
-        branch: main
-    
+  deploy:
+    provider: GitHubPages
+    repository: Elizabess/popovers
+    branch: gh-pages
+    folder: dist
