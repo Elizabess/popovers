@@ -1,12 +1,16 @@
-  version: 1.0.{build}
-  image: Visual Studio 2019
+version: 1.0.{build}
+image: Visual Studio 2019
 
-  build_script:
-    - npm install
-    - npm run build
+# Скрипты сборки
+build_script:
+  - npm install
+  - npm run build
 
-  deploy:
-    provider: GitHubPages
-    repository: Elizabess/popovers
-    branch: gh-pages
-    folder: dist
+# Настройки развертывания
+deploy:
+  provider: GitHubPages
+  repository: Elizabess/popovers
+  branch: gh-pages
+  folder: dist
+  # Убедитесь, что у вас есть токен доступа к GitHub
+  access_token: $GITHUB_TOKEN
